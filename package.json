@@ -1,0 +1,20 @@
+{
+  "name": "mf-healthtech-industries",
+  "version": "1.0.0",
+  "description": "MF HealthTech Industries - Transforming Healthcare with Technology",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "healthtech",
+    "pharmatech",
+    "healthcare",
+    "technology",
+    "website"
+  ],
+  "author": "MF HealthTech Industries",
+  "license": "MIT"
+}

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.mfhealthtech.com/sitemap.xml
+
+# Crawl-delay: 1
+# Host: https://www.mfhealthtech.com
