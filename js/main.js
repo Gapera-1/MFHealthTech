@@ -6,7 +6,17 @@ if (mobileMenuBtn && navMenu) {
     mobileMenuBtn.addEventListener('click', () => {
         mobileMenuBtn.classList.toggle('active');
         navMenu.classList.toggle('active');
+        
+        // Update ARIA attributes for accessibility
+        const isExpanded = mobileMenuBtn.classList.contains('active');
+        mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+        navMenu.setAttribute('aria-hidden', !isExpanded);
     });
+    
+    // Initialize ARIA attributes
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    navMenu.setAttribute('aria-hidden', 'true');
+    mobileMenuBtn.setAttribute('aria-label', 'Toggle navigation menu');
 }
 
 // Close mobile menu when clicking on a link
@@ -379,6 +389,17 @@ document.addEventListener('click', function(event) {
         navMenu.classList.remove('active');
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
         navMenu.setAttribute('aria-hidden', 'true');
+    }
+});
+
+// Close mobile menu with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+        mobileMenuBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        navMenu.setAttribute('aria-hidden', 'true');
+        mobileMenuBtn.focus(); // Return focus to the toggle button
     }
 });
 

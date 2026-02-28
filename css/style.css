@@ -206,28 +206,48 @@ html {
 .nav-toggle {
     display: none;
     flex-direction: column;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.9);
     border: 2px solid rgba(37, 99, 235, 0.2); /* Subtle border */
     cursor: pointer;
-    padding: 6px;
-    border-radius: 6px; /* Rounded corners */
+    padding: 8px;
+    border-radius: 8px; /* More rounded corners */
     transition: all 0.3s ease; /* Smooth transitions */
+    z-index: 1001; /* Ensure it's above other elements */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-toggle:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(37, 99, 235, 0.4);
+    transform: scale(1.05);
 }
 
 .nav-toggle:focus {
     outline: 2px solid #2563eb;
     outline-offset: 2px;
+    background: white;
     /* High contrast focus indicator for accessibility */
+}
+
+.nav-toggle.active {
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+.nav-toggle.active .hamburger-line {
+    background: white;
 }
 
 .hamburger-line {
     width: 25px;
     height: 3px;
     background: #2563eb;
-    margin: 3px 0;
+    margin: 4px 0;
     transition: 0.3s;
     border-radius: 2px;
     transition: all 0.3s ease; /* Consistent transition */
+    position: relative;
+    display: block;
 }
 
 /* Hero Section */
@@ -537,6 +557,7 @@ html {
         display: flex;
         min-height: 48px;
         min-width: 48px;
+        padding: 10px;
     }
 
     .nav-toggle.active .hamburger-line:nth-child(1) {
@@ -549,6 +570,21 @@ html {
 
     .nav-toggle.active .hamburger-line:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Improve hamburger lines for better visibility */
+    .hamburger-line {
+        width: 24px;
+        height: 3px;
+        margin: 5px 0;
+    }
+
+    .nav-toggle.active .hamburger-line:nth-child(1) {
+        transform: rotate(-45deg) translate(-3px, 5px);
+    }
+
+    .nav-toggle.active .hamburger-line:nth-child(3) {
+        transform: rotate(45deg) translate(-3px, -5px);
     }
 
     .hero {
@@ -668,6 +704,18 @@ html {
     .nav-container {
         padding: 0 12px;
         height: 56px;
+    }
+
+    .nav-toggle {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 8px;
+    }
+
+    .hamburger-line {
+        width: 20px;
+        height: 2.5px;
+        margin: 4px 0;
     }
 
     .hero-container {
@@ -883,10 +931,21 @@ html {
 /* Touch targets for better usability on mobile */
 @media (hover: none) and (pointer: coarse) {
     .nav-link,
-    .btn,
-    .hamburger-line {
+    .btn {
         min-height: 44px;
         min-width: 44px;
+    }
+    
+    .nav-toggle {
+        min-height: 48px;
+        min-width: 48px;
+        padding: 10px;
+    }
+    
+    .hamburger-line {
+        min-height: 3px;
+        width: 24px;
+        margin: 5px 0;
     }
 }
 
