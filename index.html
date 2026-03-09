@@ -2,22 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MF HealthTech Industries - Transforming Healthcare with Technology</title>
     <meta name="description" content="Leading HealthTech and PharmaTech company providing innovative software solutions for healthcare and pharmaceutical industries.">
-    <link rel="stylesheet" href="critical.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.mfhealthtech.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MF HealthTech Industries - Transforming Healthcare with Technology">
+    <meta property="og:description" content="Leading HealthTech and PharmaTech company providing innovative software solutions for healthcare and pharmaceutical industries.">
+    <meta property="og:url" content="https://www.mfhealthtech.com/">
+    <meta property="og:site_name" content="MF HealthTech Industries">
+    <meta property="og:image" content="https://www.mfhealthtech.com/assets/images/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MF HealthTech Industries - Transforming Healthcare with Technology">
+    <meta name="twitter:description" content="Leading HealthTech and PharmaTech company providing innovative software solutions for healthcare and pharmaceutical industries.">
+    <meta name="twitter:image" content="https://www.mfhealthtech.com/assets/images/logo.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="critical.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- PWA & Icons -->
     <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="apple-touch-icon" href="assets/images/logo.png">
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#0f62fe">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MF HealthTech Industries",
+        "url": "https://www.mfhealthtech.com",
+        "logo": "https://www.mfhealthtech.com/assets/images/logo.png",
+        "description": "Leading HealthTech and PharmaTech company providing innovative software solutions for healthcare and pharmaceutical industries.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Huye-Butare",
+            "addressCountry": "RW"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+250781050437",
+            "contactType": "customer service",
+            "email": "info@mfhealthtech.com"
+        },
+        "sameAs": [
+            "https://linkedin.com/company/mfhealthtech",
+            "https://twitter.com/mfhealthtech",
+            "https://github.com/mfhealthtech"
+        ]
+    }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
     <header class="navbar" role="banner">
         <nav class="nav-container" role="navigation" aria-label="Main navigation">
@@ -25,13 +72,13 @@
                 <img src="assets/images/logo.png" alt="MF HealthTech Industries Logo" class="logo-image" title="MF HealthTech Industries" role="img">
                 
             </div>
-            <ul class="nav-menu" role="menubar">
-                <li role="none"><a href="index.html" class="nav-link active" role="menuitem">Home</a></li>
-                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
-                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
-                <li role="none"><a href="solutions.html" class="nav-link" role="menuitem">Solutions</a></li>
-                <li role="none"><a href="careers.html" class="nav-link" role="menuitem">Careers</a></li>
-                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
                 <span class="hamburger-line" aria-hidden="true"></span>
@@ -41,18 +88,37 @@
         </nav>
     </header>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Transforming Healthcare with Technology</h1>
+                <div class="hero-badge">
+                    <span class="hero-badge-dot" aria-hidden="true"></span>
+                    Healthcare Innovation Platform
+                </div>
+                <h1 class="hero-title">Transforming Healthcare with <span class="hero-title-highlight">Technology</span></h1>
                 <p class="hero-subtitle">
                     Pioneering the future of HealthTech and PharmaTech through innovative software solutions, 
-                    digital healthcare platforms, and advanced pharmaceutical systems that save lives and improve patient outcomes.
+                    digital healthcare platforms, and advanced pharmaceutical systems.
                 </p>
                 <div class="hero-buttons">
                     <a href="solutions.html" class="btn btn-primary">Explore Solutions</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                    <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">500+</div>
+                        <div class="hero-stat-label">Healthcare Partners</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">2M+</div>
+                        <div class="hero-stat-label">Patients Impacted</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">99.9%</div>
+                        <div class="hero-stat-label">System Uptime</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,6 +127,11 @@
     <!-- Feature Cards Section -->
     <section class="features">
         <div class="container">
+            <div class="section-header">
+                <span class="section-badge">What We Do</span>
+                <h2 class="section-title">End-to-End Healthcare Technology</h2>
+                <p class="section-subtitle">We build intelligent platforms that connect healthcare providers, pharmaceutical companies, and patients for better outcomes.</p>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -144,22 +215,163 @@
         </div>
     </section>
 
+    <!-- Trusted By Section -->
+    <section class="trusted-section">
+        <div class="container">
+            <p class="trusted-label">Trusted by Leading Healthcare Organizations</p>
+            <div class="trusted-logos">
+                <span class="trusted-logo">Rwanda Biomedical Centre</span>
+                <span class="trusted-logo">King Faisal Hospital</span>
+                <span class="trusted-logo">CHUB Hospital</span>
+                <span class="trusted-logo">Partners In Health</span>
+                <span class="trusted-logo">Rwanda FDA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">What Our Partners Say</h2>
+                <p class="section-subtitle">Healthcare professionals trust MF HealthTech to deliver reliable, innovative technology solutions.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        &ldquo;MF HealthTech's EHR platform transformed how we manage patient data. The system reduced our documentation time by 40% and significantly improved care coordination across departments.&rdquo;
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Dr. W</div>
+                            <div class="testimonial-role">Medical Director, Regional Hospital</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        &ldquo;The pharmacy management system has been a game-changer. Inventory tracking is now automated, compliance is seamless, and we've reduced medication errors by over 60%.&rdquo;
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <div>
+                            <div class="testimonial-name">FM</div>
+                            <div class="testimonial-role">Head Pharmacist, Central Pharmacy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote class="testimonial-quote">
+                        &ldquo;Their health analytics dashboard gives us real-time insights we never had before. We can now predict patient readmissions and allocate resources more effectively.&rdquo;
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Dr. G</div>
+                            <div class="testimonial-role">Chief of Health Informatics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Healthcare?</h2>
+                <p>Partner with MF HealthTech Industries to build the future of healthcare technology. Let's create solutions that save lives.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Get Started Today</a>
+                    <a href="solutions.html" class="btn btn-secondary">View Our Solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <h3 class="footer-title">MF HealthTech Industries</h3>
-                    <p class="footer-tagline">Transforming Healthcare with Technology</p>
+                    <p class="footer-tagline">Transforming healthcare delivery through innovative technology solutions that save lives and improve patient outcomes worldwide.</p>
                 </div>
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <nav aria-label="Solutions">
+                        <a href="solutions.html">Smart Medication</a>
+                        <a href="solutions.html">Pharmacy Management</a>
+                        <a href="solutions.html">Health Analytics</a>
+                    </nav>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <nav aria-label="Company">
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="careers.html">Careers</a>
+                    </nav>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <nav aria-label="Connect">
+                        <a href="contact.html">Contact Us</a>
+                        <a href="mailto:info@mfhealthtech.com">info@mfhealthtech.com</a>
+                        <a href="tel:+250781050437">+250 781 050 437</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-content">
                 <div class="footer-info">
                     <p>&copy; 2026 MF HealthTech Industries. All rights reserved.</p>
-                    <p class="footer-note">Leading the future of HealthTech and PharmaTech innovation.</p>
+                </div>
+                <div class="footer-social" aria-label="Social media links">
+                    <a href="https://linkedin.com/company/mfhealthtech" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    <a href="https://twitter.com/mfhealthtech" aria-label="X (Twitter)" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="https://github.com/mfhealthtech" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </div>
+                <div class="footer-info">
+                    <p class="footer-note">Huye-Butare, Rwanda</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

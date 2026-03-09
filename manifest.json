@@ -1,22 +1,47 @@
 {
     "name": "MF HealthTech Industries",
     "short_name": "MF HealthTech",
-    "description": "Transforming Healthcare with Technology",
+    "description": "Transforming Healthcare with Technology — innovative health technology solutions in Rwanda.",
     "start_url": "/",
+    "scope": "/",
+    "id": "/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#2563eb",
+    "theme_color": "#0f62fe",
     "orientation": "portrait",
+    "categories": ["health", "medical", "business"],
     "icons": [
         {
             "src": "assets/images/logo.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
             "src": "assets/images/logo.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Our Solutions",
+            "short_name": "Solutions",
+            "url": "/solutions",
+            "icons": []
+        },
+        {
+            "name": "Contact Us",
+            "short_name": "Contact",
+            "url": "/contact",
+            "icons": []
+        },
+        {
+            "name": "Career Opportunities",
+            "short_name": "Careers",
+            "url": "/careers",
+            "icons": []
         }
     ]
 }

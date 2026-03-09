@@ -2,22 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solutions - MF HealthTech Industries</title>
     <meta name="description" content="Innovative healthcare solutions including smart medication reminders, pharmacy management platforms, and health analytics dashboards.">
-    <link rel="stylesheet" href="critical.css" media="print" onload="this.media='all'">
-    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.mfhealthtech.com/solutions.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Solutions - MF HealthTech Industries">
+    <meta property="og:description" content="Innovative healthcare solutions including smart medication reminders, pharmacy management platforms, and health analytics dashboards.">
+    <meta property="og:url" content="https://www.mfhealthtech.com/solutions.html">
+    <meta property="og:site_name" content="MF HealthTech Industries">
+    <meta property="og:image" content="https://www.mfhealthtech.com/assets/images/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solutions - MF HealthTech Industries">
+    <meta name="twitter:description" content="Innovative healthcare solutions including smart medication reminders, pharmacy management platforms, and health analytics dashboards.">
+    <meta name="twitter:image" content="https://www.mfhealthtech.com/assets/images/logo.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="critical.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="apple-touch-icon" href="assets/images/logo.png">
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#0f62fe">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Solutions - MF HealthTech Industries",
+        "description": "Innovative healthcare solutions including smart medication reminders, pharmacy management platforms, and health analytics dashboards.",
+        "url": "https://www.mfhealthtech.com/solutions",
+        "provider": {
+            "@type": "Organization",
+            "name": "MF HealthTech Industries"
+        }
+    }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Navigation -->
     <header class="navbar" role="banner">
         <nav class="nav-container" role="navigation" aria-label="Main navigation">
@@ -25,13 +58,13 @@
                 <img src="assets/images/logo.png" alt="MF HealthTech Industries Logo" class="logo-image" title="MF HealthTech Industries" role="img">
                 
             </div>
-            <ul class="nav-menu" role="menubar">
-                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
-                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
-                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
-                <li role="none"><a href="solutions.html" class="nav-link active" role="menuitem">Solutions</a></li>
-                <li role="none"><a href="careers.html" class="nav-link" role="menuitem">Careers</a></li>
-                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="solutions.html" class="nav-link active" aria-current="page">Solutions</a></li>
+                <li><a href="careers.html" class="nav-link">Careers</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
                 <span class="hamburger-line" aria-hidden="true"></span>
@@ -41,6 +74,7 @@
         </nav>
     </header>
 
+    <main id="main-content">
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
@@ -58,6 +92,7 @@
     <section class="solutions-overview">
         <div class="container">
             <div class="intro-text">
+                <span class="section-badge">Our Solutions</span>
                 <h2>Comprehensive Healthcare Technology Solutions</h2>
                 <p>
                     Our solutions portfolio addresses the critical needs of modern healthcare delivery and pharmaceutical operations. 
@@ -352,6 +387,7 @@
     <!-- Integration Section -->
     <section class="integration-section">
         <div class="container">
+            <span class="section-badge">Integration</span>
             <h2 class="section-title">Seamless Integration</h2>
             <p class="section-subtitle">
                 Our solutions integrate seamlessly with your existing healthcare infrastructure
@@ -444,22 +480,41 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <h3 class="footer-title">MF HealthTech Industries</h3>
-                    <p class="footer-tagline">Transforming Healthcare with Technology</p>
+                    <p class="footer-tagline">Transforming healthcare delivery through innovative technology solutions that save lives and improve patient outcomes worldwide.</p>
                 </div>
-                <div class="footer-info">
-                    <p>&copy; 2026 MF HealthTech Industries. All rights reserved.</p>
-                    <p class="footer-note">Leading the future of HealthTech and PharmaTech innovation.</p>
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <nav aria-label="Solutions"><a href="solutions.html">Smart Medication</a><a href="solutions.html">Pharmacy Management</a><a href="solutions.html">Health Analytics</a></nav>
                 </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <nav aria-label="Company"><a href="about.html">About Us</a><a href="services.html">Services</a><a href="careers.html">Careers</a></nav>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <nav aria-label="Connect"><a href="contact.html">Contact Us</a><a href="mailto:info@mfhealthtech.com">info@mfhealthtech.com</a><a href="tel:+250781050437">+250 781 050 437</a></nav>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="footer-info"><p>&copy; 2026 MF HealthTech Industries. All rights reserved.</p></div>
+                <div class="footer-social" aria-label="Social media links">
+                    <a href="https://linkedin.com/company/mfhealthtech" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    <a href="https://twitter.com/mfhealthtech" aria-label="X (Twitter)" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="https://github.com/mfhealthtech" aria-label="GitHub" rel="noopener noreferrer" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </div>
+                <div class="footer-info"><p class="footer-note">Huye-Butare, Rwanda</p></div>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
