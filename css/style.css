@@ -2241,14 +2241,18 @@ ul, ol {
         height: 40px;
     }
 
+    .navbar {
+        overflow: visible;
+    }
+
     .nav-menu {
-        position: fixed;
-        top: 64px;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
         height: calc(100vh - 64px);
         height: calc(100dvh - 64px);
-        z-index: 999;
+        z-index: 9999;
         background: var(--white);
         flex-direction: column;
         align-items: stretch;
