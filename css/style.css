@@ -260,6 +260,35 @@ ul, ol {
     outline-offset: 2px;
 }
 
+/* Mobile nav panel - rendered as direct child of body to escape stacking contexts */
+.mobile-nav-panel {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background: #fff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    overflow-y: auto;
+    border-top: 1px solid #e2e8f0;
+    list-style: none;
+    margin: 0;
+}
+
+.mobile-nav-panel.active {
+    display: flex;
+}
+
+.mobile-nav-panel .nav-link {
+    padding: 1rem;
+    font-size: 1rem;
+    display: block;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -2234,9 +2263,7 @@ ul, ol {
 
 @media (max-width: 768px) {
     .nav-container {
-        height: auto;
-        min-height: 64px;
-        flex-wrap: wrap;
+        height: 64px;
     }
 
     .logo-image {
@@ -2245,22 +2272,6 @@ ul, ol {
 
     .nav-menu {
         display: none;
-        order: 3;
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-        padding: var(--space-4) 0;
-        border-top: 1px solid var(--gray-200);
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-link {
-        padding: var(--space-4);
-        font-size: var(--font-size-base);
-        border-radius: var(--border-radius-sm);
     }
 
     .nav-toggle {
@@ -2569,7 +2580,8 @@ main {
         background: rgba(15, 98, 254, 0.15);
     }
 
-    .nav-menu {
+    .nav-menu,
+    .mobile-nav-panel {
         background: var(--gray-900);
     }
 

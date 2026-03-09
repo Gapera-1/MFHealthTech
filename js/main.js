@@ -18,6 +18,30 @@
     // --- Mobile Menu ---
     var mobileMenuBtn = document.getElementById('mobile-menu-btn');
     var navMenu = document.querySelector('.nav-menu');
+    var navMenuOriginalParent = navMenu ? navMenu.parentNode : null;
+    var navMenuNextSibling = navMenu ? navMenu.nextSibling : null;
+
+    // On mobile, move nav-menu to body so it escapes navbar stacking context
+    function setupMobileMenu() {
+        if (!navMenu) return;
+        if (window.innerWidth <= 768) {
+            if (navMenu.parentNode !== document.body) {
+                document.body.appendChild(navMenu);
+                navMenu.classList.add('mobile-nav-panel');
+            }
+        } else {
+            if (navMenu.parentNode === document.body) {
+                if (navMenuNextSibling) {
+                    navMenuOriginalParent.insertBefore(navMenu, navMenuNextSibling);
+                } else {
+                    navMenuOriginalParent.appendChild(navMenu);
+                }
+                navMenu.classList.remove('mobile-nav-panel');
+            }
+        }
+    }
+
+    setupMobileMenu();
 
     function closeMobileMenu() {
         if (mobileMenuBtn && navMenu) {
@@ -40,7 +64,6 @@
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        // Only hide nav from assistive tech on mobile
         if (window.innerWidth <= 768) {
             navMenu.setAttribute('aria-hidden', 'true');
         }
@@ -71,8 +94,9 @@
         }
     });
 
-    // Close menu on resize to desktop
+    // Handle resize: move menu in/out of body
     window.addEventListener('resize', debounce(function () {
+        setupMobileMenu();
         if (window.innerWidth > 768) {
             closeMobileMenu();
             if (navMenu) navMenu.removeAttribute('aria-hidden');

@@ -215,9 +215,7 @@ body {
 
 @media (max-width: 768px) {
     .nav-container {
-        height: auto;
-        min-height: 64px;
-        flex-wrap: wrap;
+        height: 64px;
     }
 
     .logo-image {
