@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mf-healthtech-v4';
+const CACHE_NAME = 'mf-healthtech-v5';
 const urlsToCache = [
   'index.html',
   'css/style.css',
