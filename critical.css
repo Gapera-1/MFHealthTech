@@ -215,11 +215,17 @@ body {
 
 @media (max-width: 768px) {
     .nav-container {
-        height: 64px;
+        height: auto;
+        min-height: 64px;
+        flex-wrap: wrap;
     }
 
     .logo-image {
         height: 40px;
+    }
+
+    .nav-menu {
+        display: none;
     }
 
     .nav-toggle {
