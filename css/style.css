@@ -2246,7 +2246,9 @@ ul, ol {
         top: 64px;
         left: 0;
         right: 0;
-        bottom: 0;
+        height: calc(100vh - 64px);
+        height: calc(100dvh - 64px);
+        z-index: 999;
         background: var(--white);
         flex-direction: column;
         align-items: stretch;
