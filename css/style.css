@@ -273,7 +273,7 @@ ul, ol {
     top: 64px;
     left: 0;
     right: 0;
-    bottom: 0;
+    max-height: calc(100vh - 64px);
     z-index: 99999;
     background: #fff;
     flex-direction: column;
@@ -283,10 +283,30 @@ ul, ol {
     border-top: 1px solid #e2e8f0;
     list-style: none;
     margin: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-nav-panel.active {
     display: flex;
+}
+
+/* Mobile menu backdrop */
+.mobile-menu-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-backdrop.active {
+    display: block;
+    opacity: 1;
 }
 
 .mobile-nav-panel .nav-link {

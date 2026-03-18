@@ -20,6 +20,7 @@
     var navMenu = document.querySelector('.nav-menu');
     var navMenuOriginalParent = navMenu ? navMenu.parentNode : null;
     var navMenuNextSibling = navMenu ? navMenu.nextSibling : null;
+    var mobileBackdrop = null;
 
     // On mobile, move nav-menu to body so it escapes navbar stacking context
     function setupMobileMenu() {
@@ -28,6 +29,16 @@
             if (navMenu.parentNode !== document.body) {
                 document.body.appendChild(navMenu);
                 navMenu.classList.add('mobile-nav-panel');
+                
+                // Create backdrop if it doesn't exist
+                if (!mobileBackdrop) {
+                    mobileBackdrop = document.createElement('div');
+                    mobileBackdrop.className = 'mobile-menu-backdrop';
+                    document.body.appendChild(mobileBackdrop);
+                    
+                    // Add click handler to close menu when backdrop is clicked
+                    mobileBackdrop.addEventListener('click', closeMobileMenu);
+                }
             }
         } else {
             if (navMenu.parentNode === document.body) {
@@ -37,6 +48,12 @@
                     navMenuOriginalParent.appendChild(navMenu);
                 }
                 navMenu.classList.remove('mobile-nav-panel');
+                
+                // Remove backdrop if it exists
+                if (mobileBackdrop) {
+                    mobileBackdrop.remove();
+                    mobileBackdrop = null;
+                }
             }
         }
     }
@@ -49,6 +66,11 @@
             navMenu.classList.remove('active');
             mobileMenuBtn.setAttribute('aria-expanded', 'false');
             navMenu.setAttribute('aria-hidden', 'true');
+            
+            // Hide backdrop
+            if (mobileBackdrop) {
+                mobileBackdrop.classList.remove('active');
+            }
         }
     }
 
@@ -59,6 +81,11 @@
         navMenu.classList.toggle('active', !isActive);
         mobileMenuBtn.setAttribute('aria-expanded', String(!isActive));
         navMenu.setAttribute('aria-hidden', String(isActive));
+        
+        // Toggle backdrop
+        if (mobileBackdrop) {
+            mobileBackdrop.classList.toggle('active', !isActive);
+        }
     }
 
     if (mobileMenuBtn && navMenu) {
@@ -80,7 +107,8 @@
             navMenu &&
             navMenu.classList.contains('active') &&
             !navMenu.contains(e.target) &&
-            !mobileMenuBtn.contains(e.target)
+            !mobileMenuBtn.contains(e.target) &&
+            (!mobileBackdrop || !mobileBackdrop.contains(e.target))
         ) {
             closeMobileMenu();
         }
