@@ -831,19 +831,26 @@ ul, ol {
     align-items: start;
 }
 .leader-avatar {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 15px; /* Centers the avatar and adds spacing below */
-    overflow: hidden;    /* Clips the image to the border radius */
-    border-radius: 50%;  /* Makes the container circular */
-    background-color: #f3f4f6; /* Light gray fallback */
+    width: 120px;          /* Increased for better visibility */
+    height: 120px;
+    margin: 0 auto 15px;
+    border-radius: 50% !important; /* Forces circular shape */
+    overflow: hidden !important;   /* This is what hides the square corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;            /* Keeps the image contained */
+    background-color: #f3f4f6;
+    /* Optional: Add a shadow or border to match your design */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .leader-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;   /* Ensures the photo fills the circle without stretching */
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;  /* Prevents the 'squashed' look */
     display: block;
+    border-radius: 50%;            /* Redundant but helps some browsers */
 }
 
 .content-text h2 {
